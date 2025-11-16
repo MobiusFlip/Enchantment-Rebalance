@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "package": "com.mobiusflip.enchantmentrebalance.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "mixins.enchantmentrebalance.refmap.json",
+  "client": [
+  ],
+  "mixins": [
+    "MixinProtectionEnchantment",
+    "MixinEnchantment",
+    "MixinLivingEntity"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
