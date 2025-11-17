@@ -1,35 +1,36 @@
 package com.mobiusflip.enchantmentrebalance;
 
 import com.mojang.logging.LogUtils;
-import net.minecraft.ResourceLocationException;
+import net.minecraft.SharedConstants;
 import net.minecraft.client.Minecraft;
-import net.minecraft.core.Registry;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.item.Item;
+import net.minecraft.network.chat.Component;
+import net.minecraft.server.packs.PackType;
+import net.minecraft.server.packs.PathPackResources;
+import net.minecraft.server.packs.metadata.pack.PackMetadataSection;
+import net.minecraft.server.packs.repository.Pack;
+import net.minecraft.server.packs.repository.PackSource;
 import net.minecraft.world.item.enchantment.Enchantment;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
+import net.minecraftforge.event.AddPackFindersEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
+import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.forgespi.language.IModFileInfo;
+import net.minecraftforge.forgespi.locating.IModFile;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.slf4j.Logger;
+import java.nio.file.Path;
+import java.nio.file.Files;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(EnchantmentRebalance.MODID)
@@ -52,6 +53,8 @@ public class EnchantmentRebalance
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
+        // modEventBus.addListener(this::packEnable);
+
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
 
@@ -60,6 +63,18 @@ public class EnchantmentRebalance
 
         EnchantmentRebalance.ENCHANTMENTS.register(context.getModEventBus());
     }
+
+    /*
+    private void packEnable(AddPackFindersEvent event)
+    {
+        if(event.getPackType() != PackType.CLIENT_RESOURCES) return;
+        var resourcePath = ModList.get().getModFileById(MODID).getFile().findResource("enchdesc_replacements");
+        if(resourcePath == null) return;
+        Pack pack = Pack.readMetaAndCreate("builtin/enchantmentrebalance", Component.literal("Enchantment Description Replacements"), true,
+                (path) -> new PathPackResources(path, resourcePath, false), PackType.CLIENT_RESOURCES, Pack.Position.TOP, PackSource.BUILT_IN);
+        if(pack != null) event.addRepositorySource((packConsumer) -> packConsumer.accept(pack));
+    }
+    */
 
     private void commonSetup(final FMLCommonSetupEvent event)
     {

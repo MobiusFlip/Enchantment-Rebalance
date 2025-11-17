@@ -1,0 +1,16 @@
+{
+  "enchantment.minecraft.bane_of_arthropods": "Invertebane",
+  "enchantment.minecraft.protection": "Melee Protection",
+  "enchantment.minecraft.fire_protection": "Elemental Protection",
+  "enchantment.minecraft.blast_protection": "Magic Protection",
+  "enchantment.enchantmentrebalance.sentinel": "Sentinel",
+  "enchantment.enchantmentrebalance.hunter": "Hunter",
+
+  "enchantment.minecraft.protection.desc": "Reduces damage from heavy impacts like melee attacks or collisions.",
+  "enchantment.minecraft.fire_protection.desc": "Reduces damage from environmental dangers like fire, lightning, or harmful plants.",
+  "enchantment.minecraft.blast_protection.desc": "Reduces damage from supremely destructive forces such as poison, wither skulls, or explosions.",
+  "enchantment.minecraft.projectile_protection.desc": "Reduces damage from projectiles such as arrows, fireballs, and falling blocks.",
+  "enchantment.minecraft.bane_of_arthropods.desc": "Increases damage against creepy-crawly monsters like Spiders, Creepers, Slimes, and Guardians.",
+  "enchantment.enchantmentrebalance.hunter.desc": "Increases damage against animals such as Hoglins and Polar Bears.",
+  "enchantment.enchantmentrebalance.sentinel.desc": "Increases damage against humanoid monsters like Illagers, Piglins, and Endermen."
+}

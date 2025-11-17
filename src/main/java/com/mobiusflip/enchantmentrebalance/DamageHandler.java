@@ -5,6 +5,7 @@ import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.MobType;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.Enchantments;
@@ -46,7 +47,7 @@ public class DamageHandler {
         ItemStack weapon = attacker.getMainHandItem();
         float damageBonus = 0;
 
-        if(weapon.getEnchantmentLevel(Enchantments.BANE_OF_ARTHROPODS) > 0 && isInvertebrate(target.getType())) {
+        if(weapon.getEnchantmentLevel(Enchantments.BANE_OF_ARTHROPODS) > 0 && isInvertebrate(target.getType()) && (target.getMobType() != MobType.ARTHROPOD)) {
             damageBonus += 2.5 * weapon.getEnchantmentLevel(Enchantments.BANE_OF_ARTHROPODS);
         }
 
@@ -61,7 +62,7 @@ public class DamageHandler {
         float sweepMultiplier = 1f;
         if(PRIMARY_TARGET.getOrDefault(attacker, null) != target) {
             if(weapon.getEnchantmentLevel(Enchantments.SWEEPING_EDGE) > 0) {
-                sweepMultiplier = weapon.getEnchantmentLevel(Enchantments.SWEEPING_EDGE)/(weapon.getEnchantmentLevel(Enchantments.SWEEPING_EDGE)+1);
+                sweepMultiplier = (float) weapon.getEnchantmentLevel(Enchantments.SWEEPING_EDGE) /(weapon.getEnchantmentLevel(Enchantments.SWEEPING_EDGE)+1);
             }
             else sweepMultiplier = 0f;
         } else if (weapon.getEnchantmentLevel(Enchantments.BANE_OF_ARTHROPODS) > 0 && isInvertebrate(target.getType())) {
