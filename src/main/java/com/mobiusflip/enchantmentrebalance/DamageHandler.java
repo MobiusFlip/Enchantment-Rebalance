@@ -59,6 +59,10 @@ public class DamageHandler {
             damageBonus += 2.5 * weapon.getEnchantmentLevel(EnchantmentRebalance.HUNTER.get());
         }
 
+        if(weapon.getEnchantmentLevel(Enchantments.IMPALING) > 0 && target.isInWaterOrRain() && target.getMobType() != MobType.WATER) {
+            damageBonus += 2.5 * weapon.getEnchantmentLevel(Enchantments.IMPALING);
+        }
+
         float sweepMultiplier = 1f;
         if(PRIMARY_TARGET.getOrDefault(attacker, null) != target) {
             if(weapon.getEnchantmentLevel(Enchantments.SWEEPING_EDGE) > 0) {

@@ -14,3 +14,4 @@ Smite and Sharpness are unchanged, but Bane of Arthropods is upgraded and joined
 * **Invertebane:** Replaces Bane of Arthropods, now dealing its extra damage and slowness to creeping, slimy, and shelled mobs. By default, this includes guardians, slimes, shulkers, and creepers as well as the normal set of arthropods.
 * **Sentinel:** Deals extra damage to humanoid monsters like illagers, witches, piglins, and endermen.
 * **Hunter:** Deals extra damage to wild animals like cows, polar bears, and hoglins.
+* **Impaling:** Now deals its extra damage to all mobs in water or rain, as well as all aquatic mobs in all circumstances.
