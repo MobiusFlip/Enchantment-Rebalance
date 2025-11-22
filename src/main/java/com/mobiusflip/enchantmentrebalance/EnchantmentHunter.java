@@ -24,7 +24,7 @@ public class EnchantmentHunter extends Enchantment {
     }
 
     public boolean checkCompatibility(Enchantment pOther) {
-        return pOther != Enchantments.SHARPNESS && pOther != Enchantments.SMITE && pOther != Enchantments.BANE_OF_ARTHROPODS && pOther != EnchantmentRebalance.SENTINEL.get() && super.checkCompatibility(pOther);
+        return pOther != Enchantments.SHARPNESS && pOther != Enchantments.SMITE && pOther != Enchantments.BANE_OF_ARTHROPODS && pOther != MainEnchantmentRebalance.SENTINEL.get() && super.checkCompatibility(pOther);
     }
 
     public boolean canEnchant(ItemStack pStack) {

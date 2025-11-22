@@ -8,7 +8,11 @@
   "mixins": [
     "MixinProtectionEnchantment",
     "MixinEnchantment",
-    "MixinLivingEntity"
+    "MixinLivingEntity",
+    "MixinItemStack",
+    "MixinPlayer",
+    "MixinFoodData",
+    "MixinTieredItem"
   ],
   "injectors": {
     "defaultRequire": 1

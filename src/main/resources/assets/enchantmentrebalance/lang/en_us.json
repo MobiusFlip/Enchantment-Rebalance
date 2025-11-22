@@ -5,6 +5,19 @@
   "enchantment.minecraft.blast_protection": "Magic Protection",
   "enchantment.enchantmentrebalance.sentinel": "Sentinel",
   "enchantment.enchantmentrebalance.hunter": "Hunter",
+  "enchantment.enchantmentrebalance.precise_point": "Precise Point",
+  "enchantment.enchantmentrebalance.outstretch": "Outstretch",
+  "enchantment.enchantmentrebalance.collector": "Collector",
+  "enchantment.enchantmentrebalance.nocturnal": "Nocturnal",
+  "enchantment.enchantmentrebalance.swift_stride": "Swift Stride",
+  "enchantment.enchantmentrebalance.high_climb": "High Climb",
+  "enchantment.enchantmentrebalance.endurance": "Endurance",
+  "enchantment.enchantmentrebalance.vitality": "Vitality",
+  "enchantment.enchantmentrebalance.earth_eater": "Earth Eater",
+  "enchantment.enchantmentrebalance.guillotine": "Guillotine",
+  "enchantment.enchantmentrebalance.mattock": "Mattock",
+  "enchantment.enchantmentrebalance.verdant": "Verdant",
+
 
   "enchantment.minecraft.protection.desc": "Reduces damage from heavy impacts like melee attacks or collisions.",
   "enchantment.minecraft.fire_protection.desc": "Reduces damage from environmental dangers like fire, lightning, or harmful plants.",
@@ -12,5 +25,17 @@
   "enchantment.minecraft.projectile_protection.desc": "Reduces damage from projectiles such as arrows, fireballs, and falling blocks.",
   "enchantment.minecraft.bane_of_arthropods.desc": "Increases damage against creepy-crawly monsters like Spiders, Creepers, Slimes, and Guardians.",
   "enchantment.enchantmentrebalance.hunter.desc": "Increases damage against animals such as Hoglins and Polar Bears.",
-  "enchantment.enchantmentrebalance.sentinel.desc": "Increases damage against humanoid monsters like Illagers, Piglins, and Endermen."
+  "enchantment.enchantmentrebalance.sentinel.desc": "Increases damage against humanoid monsters like Illagers, Piglins, and Endermen.",
+  "enchantment.enchantmentrebalance.precise_point.desc": "Increases attack speed, but prevents sweeping attacks.",
+  "enchantment.enchantmentrebalance.outstretch.desc": "Increases the user's reach with this tool.",
+  "enchantment.enchantmentrebalance.collector.desc": "Collects block drops directly into the user's inventory.",
+  "enchantment.enchantmentrebalance.nocturnal.desc": "See in the dark and avoid aggression from phantoms.",
+  "enchantment.enchantmentrebalance.swift_stride.desc": "Increases movement speed.",
+  "enchantment.enchantmentrebalance.high_climb.desc": "Lets the wearer step up full blocks.",
+  "enchantment.enchantmentrebalance.endurance.desc": "Reduces food depletion from running, jumping, swimming, and fighting.",
+  "enchantment.enchantmentrebalance.vitality.desc": "Naturally regenerate health faster and with less food.",
+  "enchantment.enchantmentrebalance.earth_eater.desc": "Consumes basic stones to preserve durability.",
+  "enchantment.enchantmentrebalance.guillotine.desc": "Slain monsters may drop their heads.",
+  "enchantment.enchantmentrebalance.mattock.desc": "Breaks stone and wood as effectively as a basic pickaxe or axe.",
+  "enchantment.enchantmentrebalance.verdant.desc": "Fertilize crops at the cost of durability."
 }
